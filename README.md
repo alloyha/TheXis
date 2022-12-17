@@ -9,7 +9,7 @@ Remarkable changes are:
 
 + Unsupported non-based POLI-USP standards funcions removal: headers, titles, table of contents, among others;
 + Code refactoring: added comments to allow maintainability. The new class has half the previous class size;
-+ "Hacks" removal: ```fancyhdr``` e ```geometry``` are undesirable;
++ "Hacks" removal: undesirable ```fancyhdr``` e ```geometry```;
 + Pre-textual implementation changes;
 + New features: 
     - pre-textual and under chapter titles epígraph;
