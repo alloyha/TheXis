@@ -3,7 +3,7 @@ TheXis
 
 LaTeX class for textual documents at Polytechnic School of USP.
 
-TheXis (pronounce: `tɛʧiz`) follows the ABNT thesis class adapted by Prof. Paulo Barreto on POLI-USP standards ([link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)). The current class presents considerable changes on class implementation and features. 
+TheXis (pronounce: `tɛʧiz`) follows the ABNT thesis class adapted from Prof. Paulo Barreto on POLI-USP standards (available on [link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)) and Luiz Chamon (available on [link](https://github.com/lfochamon/poliTeX)). The current class presents considerable changes on class implementation and features. 
 
 Remarkable changes are:
 
