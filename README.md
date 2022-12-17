@@ -3,22 +3,27 @@ TheXis
 
 LaTeX class for textual documents at Polytechnic School of USP.
 
-TheXis (pronounce: `tɛʧiz`) follows the ABNT thesis class adapted from Prof. Paulo Barreto on POLI-USP standards (available on [link](http://www.ime.usp.br/~leofl/tex/modelo_poli.zip)) and Luiz Chamon (available on [link](https://github.com/lfochamon/poliTeX)). The current class presents considerable changes on class implementation and features. 
+TheXis (pronounce: `tɛʧiz`) follows the ABNT thesis class adapted from: 
+
+1. Prof. Paulo Barreto: on at-the-time standards, available on [link](https://www.ime.usp.br/~leofl/tex/));
+2. Luiz Chamon: on 2013-standards, available on [link](https://github.com/lfochamon/poliTeX)). 
+
+The current class presents considerable changes on class implementation and features. 
 
 Remarkable changes are:
 
-+ Unsupported non-based POLI-USP standards funcions removal: headers, titles, table of contents, among others;
-+ Code refactoring: added comments to allow maintainability. The new class has half the previous class size;
-+ "Hacks" removal: undesirable ```fancyhdr``` e ```geometry```;
++ Unsupported non-based POLI-USP standards fixes: functions, headers, titles, table of contents, among others;
++ Code refactor: added comments to allow maintainability. The new class has half the previous class size;
++ Bad practices removal: undesirable ```fancyhdr``` e ```geometry```;
 + Pre-textual implementation changes;
 + New features: 
-    - pre-textual and under chapter titles epígraph;
-    - `\part` support;
+    - pre-textual and under chapter titles epigraph;
+    - `\part`;
     - multiple authors;
-    - Bachelor thesis support;
-+ Internacionalization: supports `english`. The next step is the other languages;
+    - Bachelor thesis;
++ Internacionalization: supports `english`. "Other languages" is the next step ;
 
 # Bibliography
 
-+ POLI 2013 standards: http://www.poli.usp.br/images/stories/media/download/bibliotecas/DiretrizesTesesDissertacoes.pdf.
+[1] POLI 2013 standards: http://www.poli.usp.br/images/stories/media/download/bibliotecas/DiretrizesTesesDissertacoes.pdf.
 
