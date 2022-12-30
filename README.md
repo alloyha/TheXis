@@ -25,5 +25,5 @@ Remarkable changes are:
 
 # Bibliography
 
-[1] POLI 2013 standards: http://www.poli.usp.br/images/stories/media/download/bibliotecas/DiretrizesTesesDissertacoes.pdf.
+[1] USP standards: https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/459
 
