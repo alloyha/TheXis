@@ -31,8 +31,10 @@ __Remark__: Feature 6 has no lock on provided and recommended versions. It means
 Backlog
 --------
     
-+ Internacionalization: supports `english`. "Other languages" is the next step;
-+ Switch (portuguese <-> english) on "(Falsa) folha de rosto" version.
+1. Internacionalization: supports `english`. "Other languages" is the next step;
+2. Switch languages automatically on:
+    - Preamble;
+    - Default titles;
 
 # Bibliography
 
