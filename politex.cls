@@ -25,7 +25,7 @@
 %%%%%%  IDENTIFICATION  %%%%%%
 \NeedsTeXFormat{LaTeX2e}%
 \ProvidesClass{politex}%
-	[2013/12/29 POLI-USP LaTeX Class]
+	[2022/01/07 POLI-USP LaTeX Class]
 
 
 %%%%%%  REQUIRED PACKAGES  %%%%%%
@@ -40,7 +40,6 @@
 
 %% multicol - better multicolumns
 \RequirePackage{multicol}
-
 
 %%%%%%  INTERNATIONALIZATION  %%%%%%
 \newcommand*{\POLIagradecimentosname}{Agradecimentos}
@@ -213,14 +212,15 @@
 
 %%%%%%  MARGIN SETTINGS  %%%%%%
 
-\newgeometry{	offset = 0pt,		%	Offset between layout and page border
-				top = 3cm,			%	Top margin
-				bottom = 2cm,		%	Bottom margin
-				outer = 2cm,		%	Right (outer) margin
-				headheight = 14pt,	%	Height of the header
-				headsep = 22pt,		%	Separation from text
-				ignorehead,
-				ignorefoot
+\newgeometry{	
+	offset = 0pt,		%	Offset between layout and page border
+	top = 3cm,			%	Top margin
+	bottom = 2cm,		%	Bottom margin
+	outer = 2cm,		%	Right (outer) margin
+	headheight = 14pt,	%	Height of the header
+	headsep = 22pt,		%	Separation from text
+	ignorehead,
+	ignorefoot
 }
 
 % Set inner margin and twoside (if necessary) printing
@@ -761,6 +761,7 @@
   \par\vspace{50pt}%
   }%
 }
+
 
 %% \appendix
 \renewcommand{\appendix}{
@@ -1322,6 +1323,17 @@
     }%
  }%
  {}
+
+%%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
+
+\newenvironment{pretextualsection}[1]%
+{%
+ \if@openright\cleardoublepage\else\clearpage\fi%
+ \pretextualchapter{#1}%
+ \begin{espacosimples}%
+}%
+{\end{espacosimples}\newpage}
+
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
 
