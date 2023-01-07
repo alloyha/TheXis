@@ -38,6 +38,8 @@
 %% calc - easy calculation of lengths and numbers
 \RequirePackage{calc}
 
+\RequirePackage{pdfpages}
+
 %% multicol - better multicolumns
 \RequirePackage{multicol}
 
@@ -1333,6 +1335,7 @@
  \begin{espacosimples}%
 }%
 {\end{espacosimples}\newpage}
+
 
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
