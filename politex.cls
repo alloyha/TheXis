@@ -38,6 +38,8 @@
 %% calc - easy calculation of lengths and numbers
 \RequirePackage{calc}
 
+\RequirePackage{pdfpages}
+
 %% multicol - better multicolumns
 \RequirePackage{multicol}
 
@@ -1327,12 +1329,12 @@
 %%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
 
 \newenvironment{pretextualsection}[1]%
-{%
- \if@openright\cleardoublepage\else\clearpage\fi%
- \pretextualchapter{#1}%
- \begin{espacosimples}%
-}%
-{\end{espacosimples}\newpage}
+  {%
+   \if@openright\cleardoublepage\else\clearpage\fi%
+   \pretextualchapter{#1}%
+   \begin{espacosimples}%
+  }%
+  {\end{espacosimples}\newpage}
 
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
