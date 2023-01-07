@@ -1,4 +1,4 @@
-\documentclass[]{politex}
+\documentclass[twosideprint]{politex}
 % ========== Opções ==========
 % pnumromarab - Numeração de páginas usando algarismos romanos na parte pré-textual e arábicos na parte textual
 % abnttoc - Forçar paginação no sumário conforme ABNT (inclui "p." na frente das páginas)
@@ -28,14 +28,51 @@
 
 % ========== ABNT (requer ABNTeX 2) ==========
 %	http://www.ctan.org/tex-archive/macros/latex/contrib/abntex2
-%\usepackage[num]{abntex2cite}
+\usepackage[num]{abntex2cite}
 
 % Forçar o abntex2 a usar [ ] nas referências ao invés de ( )
-%\citebrackets{[}{]}
+\citebrackets{[}{]}
 
 
 % ========== Lorem ipsum ==========
 \usepackage{blindtext}
+
+% ========== Includes pdf pages ==========
+\usepackage{pdfpages}
+\usepackage{xpatch}
+
+% *************************************** added <<<<<<<<<<<<<<<<<<
+% PDF file with library data <<<<
+
+\newcommand{\Catalogacaonapublicacao}{library-page-stub}
+
+\newcommand{\librarydata}[1]{%
+	\begingroup 
+	\includepdf[pages={1}]{#1.pdf}
+	\endgroup       
+}
+
+\makeatletter
+\xpatchcmd{\folhaderosto}
+{
+	\if@openright
+		\cleardoublepage
+	\else
+		\clearpage
+	\fi
+}
+{
+	\newpage
+	\librarydata{\Catalogacaonapublicacao}
+	\if@openright
+		\cleardoublepage
+	\else
+		\clearpage
+	\fi
+}
+\makeatother
+% ***************************************
+
 
 % ========== Opções do documento ==========
 % Título
@@ -117,7 +154,7 @@ Resumo...
 %
 \\[3\baselineskip]
 %
-\textbf{Palavras-Chave} -- Palavra, Palavra, Palavra, Palavra, Palavra.
+\textbf{Palavras-Chave} -- Palavra1, Palavra2, Palavra3, Palavra4, Palavra5.
 \end{resumo}
 
 
@@ -127,7 +164,7 @@ Abstract...
 %
 \\[3\baselineskip]
 %
-\textbf{Keywords} -- Word, Word, Word, Word, Word.
+\textbf{Keywords} -- Word1, Word2, Word3, Word4, Word5.
 \end{abstract}
 
 
@@ -161,9 +198,6 @@ Lista de símbolos...
 \end{citacaoLonga}
 
 \blindtext
-
-
-
 \blinddocument
 
 
@@ -174,22 +208,21 @@ Lista de símbolos...
 
 % --- ABNT (requer ABNTeX 2) ---
 %	http://www.ctan.org/tex-archive/macros/latex/contrib/abntex2
-%\bibliographystyle{abntex2-num}
+\bibliographystyle{abntex2-num}
 
-%\bibliography{}
+\bibliography{}
 
 
 % ========== Apêndices (opcional) ==========
 \apendice
-\chapter{}
-\chapter{Beta}
+\chapter{Alpha $\alpha$}
+\chapter{Beta $\beta$}
 
 
 % ========== Anexos (opcional) ==========
 \anexo
-\chapter{Alpha}
-\chapter{}
-
+\chapter{Gamma $\gamma$}
+\chapter{Delta $\delta$}
 
 
 \end{document}
