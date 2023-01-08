@@ -190,7 +190,7 @@
 \newcommand*{\taxaespacosimples}{1.}
 \newcommand*{\taxaespacoumemeio}{1.35}
 \newcommand*{\taxaespacoduplo}{1.7}
-\newcommand*{\clear}{\if@openright \cleardoublepage \else \clearpage \fi}
+\newcommand*{\thexis@clear}{\if@openright \cleardoublepage \else \clearpage \fi}
 \newcommand\documentpath[1][Darth Vader]{\def\savedpath{#1}}
 
 \newcommand\folhaCatalograficaRef{library-page-stub}
@@ -661,7 +661,7 @@
 
 %% \part
 \renewcommand\part{%
-  \clear%
+  \thexis@clear%
   \thispagestyle{empty}%
   \if@twocolumn\onecolumn\@tempswatrue\else\@tempswafalse\fi%
   \ifthenelse{\boolean{ABNTinpretext}\and\boolean{ABNTaftertoc}}{
@@ -833,13 +833,13 @@
     \ifthenelse{\boolean{@twocolumn}}%
     {\setboolean{ABNTrestorecol}{true}\onecolumn}%
     {\setboolean{ABNTrestorecol}{false}}%
-    \clear
+    \thexis@clear
     \pretextualchapter{\contentsname}
     \@afterheading
     \markboth{\contentsname}{\contentsname}
     \@starttoc{toc}%
     \ifthenelse{\boolean{ABNTrestorecol}}{\twocolumn}{}%
-    \clear%
+    \thexis@clear%
     \setboolean{ABNTaftertoc}{true}
 }%
 
@@ -858,7 +858,7 @@
 % Same as the old one, but tests for ABNTrestorecol
 
 \renewcommand{\listoffigures}{%
-\clear%
+\thexis@clear%
   \ifthenelse{\boolean{@twocolumn}}%
     {\setboolean{ABNTrestorecol}{true}\onecolumn}%
     {\setboolean{ABNTrestorecol}{false}}%
@@ -877,7 +877,7 @@
 
 % Same as the old one, but tests for ABNTrestorecol
 \renewcommand\listoftables{%
-\clear%
+\thexis@clear%
   \ifthenelse{\boolean{@twocolumn}}%
     {\setboolean{ABNTrestorecol}{true}\onecolumn}%
     {\setboolean{ABNTrestorecol}{false}}%
@@ -896,7 +896,7 @@
 
 \renewenvironment{thebibliography}[1]%
 {%
-   \clear%
+   \thexis@clear%
    \thispagestyle{\chaptertitlepagestyle}%
    \global\@topnum\z@%
    \@afterindentfalse%
@@ -932,7 +932,7 @@
     \ifthenelse{\boolean{@twocolumn}}%
      {\setboolean{ABNTrestorecol}{true}\onecolumn}%
      {\setboolean{ABNTrestorecol}{false}}%
-    \clear%
+    \thexis@clear%
     \thispagestyle{\chaptertitlepagestyle}%
     \global\@topnum\z@%
     \@afterindentfalse%
@@ -1062,7 +1062,7 @@
       {\localformat\ABNTlocaldata}\\
       {\dataformat\ABNTdatadata}
     \end{espacosimples}
-    \clear%
+    \thexis@clear%
   \end{center} 
 }
 
@@ -1102,7 +1102,7 @@
       {\localformat\ABNTlocaldata}\\
       {\dataformat\ABNTdatadata}
     \end{espacosimples} 
-    \clear%
+    \thexis@clear%
   \end{center}
 }
 
@@ -1217,7 +1217,7 @@
 %%%%%%  DEDICATION  %%%%%%
 
 \newcommand{\dedicatoria}[1]{%
-    \clear%
+    \thexis@clear%
     ~\\
     [17cm]
     \vspace*{0pt}
@@ -1235,7 +1235,7 @@
 %%%%%%  ACKNOWLEDGEMENTS  %%%%%%
 
 \newenvironment{agradecimentos}{%
-    \clear%
+    \thexis@clear%
     \pretextualchapter{\POLIagradecimentosname}%
     \begin{espacosimples}%
 }%
@@ -1248,7 +1248,7 @@
 %%%%%%  EPIGRAPH  %%%%%%
 
 \newcommand{\epigrafe}[1]{%
-    \clear%
+    \thexis@clear%
     ~\\
     \vfill
     \hspace{.55\textwidth}
@@ -1267,7 +1267,7 @@
 % 10 pt font and single line spacing
 \newcommand{\ABNTabstractname}{Abstract}
 \renewenvironment{abstract}{%
-   \clear%
+   \thexis@clear%
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{abstract.}}{}%
    \pretextualchapter{\ABNTabstractname}%
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
@@ -1282,7 +1282,7 @@
 \newcommand{\resumoname}{Resumo}
 \newenvironment{resumo}%
 {%
-    \clear%
+    \thexis@clear%
     \ifthenelse{\boolean{ABNThypertoc}}{
         \renewcommand{\chaptertype}{resumo.}
     }{}%
@@ -1341,8 +1341,8 @@
 %% Environment folhadeaprovacao 
 
 \newenvironment{folhadeaprovacao}%
-  {\clear\begingroup}%
-  {\endgroup\clear}
+  {\thexis@clear\begingroup}%
+  {\endgroup\thexis@clear}
 
 
 %%%%%%  TIMES FONT  %%%%%%
@@ -1370,7 +1370,7 @@
 
 \newenvironment{pretextualsection}[1]%
 {%
- \clear%
+ \thexis@clear%
  \pretextualchapter{#1}%
  \begin{espacosimples}%
 }%
