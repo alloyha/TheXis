@@ -32,18 +32,18 @@ The main remarkable changes are:
     - Bachelor thesis;
 6. "(Falsa) folha de rosto" recommended versions (Original|Corrigida). 
  
-__Remark__: Feature 6 hasi no lock on provided and recommended versions. It means, the user may assign e.g. `\folhaderosto{pineapple}` without warning or error log message. 
+__Remark__: Feature 6 has no lock on provided and recommended versions. It means, the user may assign e.g. `\folhaderosto{pineapple}` without warning or error log message. 
 
 ## Monolithic template
 
 You may edit available `tex` file and generate `pdf` file on: 
 
-1. TeX editors e.g. `[kyle, texstudio, texworks]`;
+1. TeX editors e.g. `[kile, texstudio, texworks]`;
 2. Combination of text editors and terminal command run `pdflatex template.tex` 
 
 ## Backlog
     
-1. Internacionalization: support languages others than `[english, brazil]`;
+1. Internacionalization: support languages others than `[brazil, portuguese, english]`;
 2. Switch languages automatically on:
     - Preamble;
     - Default titles;
