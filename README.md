@@ -11,7 +11,7 @@ TheXis (pronounce: `tɛʧiz`) follows the ABNT thesis class adapted from:
 ## Table of contents
 
 1. [Features](#features)
-2. [Monolithic template](#monolithic-template)
+2. [Template](#template)
 3. [Backlog](#backlog)
 4. [Bibliography](#bibliography)
 
@@ -34,9 +34,9 @@ The main remarkable changes are:
  
 __Remark__: Feature 6 has no lock on provided and recommended versions. It means, the user may assign e.g. `\folhaderosto{pineapple}` without warning or error log message. 
 
-## Monolithic template
+## Template
 
-You may edit available `tex` file and generate `pdf` file on: 
+You may edit available content on `textual/*` file and generate `pdf` file on: 
 
 1. TeX editors e.g. `[kile, texstudio, texworks]`;
 2. Combination of text editors and terminal command run `pdflatex template.tex` 
