@@ -38,7 +38,7 @@ __Remark__: Feature 6 hasi no lock on provided and recommended versions. It mean
 
 You may edit available `tex` file and generate `pdf` file on: 
 
-1. TeX editors e.g. `[kile, texstudio, texworks]`;
+1. TeX editors e.g. `[kyle, texstudio, texworks]`;
 2. Combination of text editors and terminal command run `pdflatex template.tex` 
 
 ## Backlog
