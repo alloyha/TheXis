@@ -1369,22 +1369,12 @@
 %%%%%%  ARBITRARY PRE-TEXTUAL SECTION  %%%%%%
 
 \newenvironment{pretextualsection}[1]%
-<<<<<<< HEAD:politex.cls
-  {%
-   \if@openright\cleardoublepage\else\clearpage\fi%
-   \pretextualchapter{#1}%
-   \begin{espacosimples}%
-  }%
-  {\end{espacosimples}\newpage}
-
-=======
 {%
  \clear%
  \pretextualchapter{#1}%
  \begin{espacosimples}%
 }%
 {\end{espacosimples}\newpage}
->>>>>>> 46f3be90519c3fb218f6b0cfb6c473207aa30f9d:thexis.cls
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
 
