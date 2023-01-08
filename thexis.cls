@@ -191,7 +191,6 @@
 \newcommand*{\taxaespacoumemeio}{1.35}
 \newcommand*{\taxaespacoduplo}{1.7}
 \newcommand*{\thexis@clear}{\if@openright \cleardoublepage \else \clearpage \fi}
-\newcommand\documentpath[1][Darth Vader]{\def\savedpath{#1}}
 
 \newcommand\folhaCatalograficaRef{library-page-stub}
 \newcommand\folhacatalografica[1][library-page-stub]{\def\folhaCatalograficaRef{#1}}
