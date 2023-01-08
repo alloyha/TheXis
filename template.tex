@@ -1,4 +1,10 @@
-\documentclass[twosideprint, times]{thexis}
+\documentclass[
+    pnumromarab,
+    abnttoc,
+    twosideprint, 
+    times, 
+    normalnum
+]{thexis}
 % ========== Opções ==========
 % pnumromarab - Numeração de páginas usando algarismos romanos na parte pré-textual e arábicos na parte textual
 % abnttoc - Forçar paginação no sumário conforme ABNT (inclui "p." na frente das páginas)
@@ -14,14 +20,5 @@
 % times - Tenta usar a fonte Times New Roman para o corpo do texto
 % noindentfirst - Não indenta o primeiro parágrafo dos capítulos/seções
 
-\input{config/packages}
-\input{config/preamble_setup}
-
-\begin{document}
-
-\input{textual/preamble}
-\input{textual/prologue}
-\input{textual/bibliography}
-\input{textual/epilogue}
-
-\end{document}
+\input{config.tex}
+\input{print.tex}
